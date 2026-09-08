@@ -27,8 +27,8 @@
     <PackageProjectUrl>https://nuvyntralabs.github.io/packages/plugin-maui-voip-core/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/nuvyntralabs/Plugin.Maui.VoipCore</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <Version>1.0.7</Version>
-    <PackageReleaseNotes>Point PackageProjectUrl at the Nuvyntra Labs package page.</PackageReleaseNotes>
+    <Version>1.0.8</Version>
+    <PackageReleaseNotes>Align the README pack path with the shipped package version.</PackageReleaseNotes>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>

@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.8
+
+- Align the README pack path with the shipped package version.
+
 ## 1.0.4
 
 - Rebrand package metadata and catalog references to MauiEssentials.

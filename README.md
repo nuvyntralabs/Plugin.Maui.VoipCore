@@ -154,7 +154,7 @@ The package targets `net10.0`, `net10.0-android`, and `net10.0-ios`.
 dotnet pack src/Plugin.Maui.VoipCore/Plugin.Maui.VoipCore.csproj -c Release -o artifacts
 ```
 
-The `.nupkg` is written to `artifacts/Plugin.Maui.VoipCore.1.0.0.nupkg`.
+The `.nupkg` is written to `artifacts/Plugin.Maui.VoipCore.1.0.8.nupkg`.
 
 ## License
 
