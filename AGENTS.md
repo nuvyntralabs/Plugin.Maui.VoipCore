@@ -7,7 +7,7 @@ Generic SIP/VoIP abstraction for .NET MAUI: accounts, registration, calls, hold,
 - Package: `Plugin.Maui.VoipCore`
 - NuGet: https://www.nuget.org/packages/Plugin.Maui.VoipCore
 - GitHub: https://github.com/nuvyntralabs/Plugin.Maui.VoipCore
-- Paper: https://niladripadhy.vercel.app/opensource/plugin-maui-voip-core
+- Paper: https://nuvyntralabs.github.io/packages/plugin-maui-voip-core/
 - Catalog: https://github.com/nuvyntralabs/MauiEssentials
 - Versions: net10.0, net10.0-android (API 21+), net10.0-ios (iOS 15+)
 

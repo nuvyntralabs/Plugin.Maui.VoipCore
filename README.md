@@ -138,11 +138,41 @@ var voip = VoipCore.Create(new VoipCoreOptions
 await voip.InitializeAsync();
 ```
 
+## Permissions
+
+The host app must declare these or calls and audio routing will fail.
+
+### Android
+
+Add to `Platforms/Android/AndroidManifest.xml`:
+
+```xml
+<uses-permission android:name="android.permission.RECORD_AUDIO" />
+<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+```
+
+`RECORD_AUDIO` is a runtime permission. Incoming calls are delivered through `IncomingCall`; host a `ConnectionService` in the app if you need Telecom UI.
+
+### iOS
+
+Add to `Platforms/iOS/Info.plist`:
+
+```xml
+<key>NSMicrophoneUsageDescription</key>
+<string>This app needs the microphone for calls.</string>
+<key>UIBackgroundModes</key>
+<array>
+	<string>audio</string>
+	<string>voip</string>
+</array>
+```
+
+When `UseNativeCallUi` is `true`, incoming/outgoing calls are reported to CallKit.
+
 ## Platform notes
-
-**iOS** — set `NSMicrophoneUsageDescription` and `UIBackgroundModes` (`audio`, `voip`) in `Info.plist`. When `UseNativeCallUi` is `true`, incoming/outgoing calls are reported to CallKit.
-
-**Android** — declare `RECORD_AUDIO`, `MODIFY_AUDIO_SETTINGS`, `INTERNET`, and `ACCESS_NETWORK_STATE`. Incoming calls are delivered through `IncomingCall`; host a `ConnectionService` in the app if you need Telecom UI.
 
 ## Target frameworks
 
@@ -154,7 +184,7 @@ The package targets `net10.0`, `net10.0-android`, and `net10.0-ios`.
 dotnet pack src/Plugin.Maui.VoipCore/Plugin.Maui.VoipCore.csproj -c Release -o artifacts
 ```
 
-The `.nupkg` is written to `artifacts/Plugin.Maui.VoipCore.1.0.8.nupkg`.
+The `.nupkg` is written to `artifacts/Plugin.Maui.VoipCore.1.0.9.nupkg`.
 
 ## License
 
